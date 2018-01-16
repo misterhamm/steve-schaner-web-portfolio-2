@@ -46,8 +46,8 @@
 
     <!-- navbar -->
     <nav class="navbar">
-      <span class="open-slide">
-        <a id="three-bars" href="#">
+      <span class="open-slide"> <!-- NOTE: Think about your naming.  Class names should be descriptive of the element they represent. Think about something like .mobile-menu-button -->
+        <a id="three-bars" href="#"> <!-- NOTE: Similar naming issue here.  What if you changed the look of the button to four lines or an image? Use names that aren't quite so tied to the specific style -->
           <svg width="30" height="30">
             <path d="M0,5 30,5" stroke="#fff" stroke-width="5"/>
             <path d="M0,14 30,14" stroke="#fff" stroke-width="5"/>
@@ -84,7 +84,6 @@
           <a href="mailto:schanerst@gmail.com?Subject=Please%20Help%20Me%20Make%20a%20Website" target="top">schanerst@gmail.com</a>
         </div>
       </div>
-
     </nav> <!-- /navbar -->
 
     <!-- side-menu -->
@@ -108,7 +107,8 @@
         <a href="#" class="btn">Contact Me</a>
       </div>
     </header>
-
+<!-- NOTE: This is totally a design thing so take it for what it is. Think about more space between elements.  
+  Spreading things out (vertically especially) helps keep a site from looking cluttered. I would definitely give yourself more space below the video on desktop, though -->
     <div id="mobile-header">
       <h1>Steve Schaner</h1>
       <img class="profile-pic" src="img/profile-picture-square.jpg" alt="Picture of Steve Schaner">
@@ -135,18 +135,19 @@
   <div id="work" class="section">
     <h1 class="section-titles">Work</h1>
     <div class="work-section-container">
-
+<!-- NOTE: Need visible labels for these tiles on mobile. -->
       <div class="work-container">
         <div class="work-photo">
-          <img src="img/apex-thumbnail.jpg" alt="A lawnmore">
+          <img src="img/apex-thumbnail.jpg" alt="A lawnmore"><!-- NOTE: Typo on lawn mower -->
           <div class="photo-overlay">
             <h1>Apex</h1>
             <h3>Outdoor Services</h3>
-            <a href="#" class="btn">See Website</a>
+            <a href="#" class="btn">See Website</a> <!-- NOTE: I know these don't actually link out anywhere right now but any links that go 
+              offsite should use target="_blank" That will force the link to open in a new tab and keep your site open in their browser --> 
           </div>
         </div>
       </div>
-
+<!-- There's too much space between these two items on desktop.  They look unrelated.  Consider putting a max-width on #work and then centering that whole section -->
       <div class="work-container">
         <div class="work-photo">
           <img src="img/truth-or-dare-thumbnail.jpg" alt="Looking out onto an ocean">
@@ -164,7 +165,7 @@
   <div id="skills" class="section">
     <!-- skills (3rd row) -->
       <h1 class="section-titles">Skills</h1>
-      <p id="skills-subtitle">Hover over the skills to see how much I know.</p>
+      <p id="skills-subtitle">Hover over the skills to see how much I know.</p> <!-- NOTE: Think about this direction for a mobile user.  There is no hover so they may get confused.  In general if you have to write directions for how to do something you've probably done something cool but not intuitive for the user -->
       <div id="skillsBars" class="row">
         <div class="col-md-6">
           <h3>Front End</h3>
@@ -246,7 +247,11 @@
 
 
     <!-- Font Awesome All -->
-    <script defer src="js/fontawesome-all.js"></script>
+    <script defer src="js/fontawesome-all.js"></script> <!-- NOTE: I've not used a js file to pull in FontAwesome before but I'm dubious about whether it is 
+      better than pulling it in as a web font. Think about switching that out for performance sake.  
+      Better yet check out http://fontello.com/ That will let you put a package together of only the icons you need so you aren't forcing the user to 
+      load more data than they need. If you do stick with this check out https://fontawesome.com/get-started/svg-with-js. Their suggestion is to
+       have this file in the <head> and if you're going to serve it locally DEFINITELY us a .min file! -->
 
     <!-- jQuery cdn -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -255,3 +260,18 @@
     <script type="text/javascript" src="js/portfolioJavaScript.js"></script>
   </body>
 </html>
+
+<!-- NOTE: This is picky but some people really care about it.  Double check your tabbing throughout.  Should be obvious by looking at the markup what level I'm at.
+i.e.
+<div>
+  <div>
+    <a></a>
+  </div>
+</div>
+rather than 
+<div>
+<div>
+<a></a>
+</div>
+  </div>
+-->

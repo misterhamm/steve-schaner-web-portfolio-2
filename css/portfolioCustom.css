@@ -404,6 +404,13 @@ footer p {
   color: #5fcf80;
 }
 
+/* 
+  NOTE: try adding this to the ::before of .fi-social-treehouse
+
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) translateX(-50%);
+*/
 
 
 /**********************************
@@ -446,6 +453,8 @@ MEDIA QUERIES
 
 } /* End min-width: 568px  */
 
+/* NOTE: Don't need multiple media queries of the same breakpoint (i.e. you have two 568 and two 960) Clean this whole section up a little */
+
 @media (min-width: 768px) {
   .work-section-container {
     display: flex;
@@ -469,7 +478,7 @@ MEDIA QUERIES
   #profile-pic-lg {
     display: none;
   }
-} /* End max-width: 568px  */
+} /* End max-width: 568px NOTE: <--- NOPE NOT 568! :)  */
 
 @media(min-width: 960px) {
   .container {
@@ -495,3 +504,8 @@ MEDIA QUERIES
   }
 
 } /* End min-width: 960px  */
+
+/* 
+  NOTE: I didn't go super in depth on your styles.  Overall think about consolidation.  If you're repeating styles over and over for different classes think
+  about whether those classes really need to be different.  Stretching your legs with a CSS preprocessor would be a very good idea as well.
+*/
